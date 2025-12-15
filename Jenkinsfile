@@ -37,11 +37,11 @@ pipeline {
 
                             sh 'docker compose --version || docker compose version'
 
-                            sh 'docker compose -f docker-compose.yml down --remove-orphans || true'
+                            sh 'docker compose -f docker-compose.jenkins.yml down --remove-orphans || true'
 
-                            sh 'docker compose -f docker-compose.yml build --no-cache'
+                            sh 'docker compose -f docker-compose.jenkins.yml build --no-cache'
 
-                            sh 'docker compose -f docker-compose.yml up -d'
+                            sh 'docker compose -f docker-compose.jenkins.yml up -d'
                         }
                     }
         }
