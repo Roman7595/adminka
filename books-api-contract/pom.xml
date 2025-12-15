@@ -74,13 +74,6 @@
 				<configuration>
 					<parameters>true</parameters>
 				</configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
 			</plugin>
 		</plugins>
 	</build>
