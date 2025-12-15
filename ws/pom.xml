@@ -8,10 +8,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <packaging>jar</packaging>
-	<groupId>ws.demo</groupId>
-	<artifactId>demo</artifactId>
+	<groupId>edu.rutmiit.demo</groupId>
+	<artifactId>ws</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
+	<name>ws</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -33,20 +33,24 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webmvc</artifactId>
-		</dependency>
+            <version>4.0.0</version>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-websocket</artifactId>
-		</dependency>
+            <version>4.0.0</version>
+        </dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
-			<scope>test</scope>
+            <version>4.0.0</version>
+            <scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-websocket-test</artifactId>
+            <version>4.0.0</version>
 			<scope>test</scope>
 		</dependency>
         <dependency>
