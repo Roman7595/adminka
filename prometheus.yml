@@ -8,7 +8,7 @@ scrape_configs:
       - targets:
           [
             "demo-rest:8080",
-            "notification-service:8083",
+            "ws:8083",
             "audit-service:8082",
             "analytics-service:8081",
           ]
