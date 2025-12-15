@@ -6,6 +6,7 @@ COPY lib /app/lib
 # Копируем описание проекта
 COPY pom.xml .
 COPY src ./src
+ENTRYPOINT ["mvn", "clean package", "-DskipTests"]
 
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
