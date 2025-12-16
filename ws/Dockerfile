@@ -21,7 +21,6 @@ WORKDIR /app
 
 RUN addgroup -S javauser && adduser -S javauser -G javauser
 
-
 ARG JAR_FILE=target/*.jar
 
 COPY ${JAR_FILE} app.jar
