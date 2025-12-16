@@ -11,31 +11,18 @@ pipeline {
     }
 
     stages {
-//         stage('Checkout') {
-//             steps {
-//                 sh 'which java || true'
-//                 sh 'java -version'
-//                 sh 'javac -version'
-//                 sh 'echo "JAVA_HOME=$JAVA_HOME"'
-//                 sh 'mvn -v'
-//                 checkout scm
-//                 sh 'git submodule init || true'
-//                 sh 'git submodule update --recursive --remote || true'
-//             }
-//         }
-
         stage('Build') {
             steps {
                 sh 'mvn -B clean install -DskipTests'
             }
         }
 
-        stage('Docker Compose Build') {
-                    steps {
-                        script {
-                            sh 'docker compose -f docker-compose.jenkins.yaml up --build -d'
-                        }
-                    }
+        stage('Docker Compose') {
+            steps {
+                script {
+                    sh 'docker compose -f docker-compose.jenkins.yaml up --build -d'
+                }
+            }
         }
     }
 }
