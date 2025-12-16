@@ -46,19 +46,6 @@ services:
     networks:
       - microservices-net
 
-  notification-service:
-    build: ./ws
-    ports:
-      - "8083:8083"
-    environment:
-      - SPRING_RABBITMQ_HOST=rabbitmq
-      - SERVER_PORT=8083
-    depends_on:
-      rabbitmq:
-        condition: service_healthy
-    networks:
-      - microservices-net
-
   audit-service:
     build: ./audit-service
     environment:
